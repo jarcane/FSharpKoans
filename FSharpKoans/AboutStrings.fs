@@ -94,7 +94,9 @@ module ``about strings`` =
             let double x = 
                 x * 2
 
-            sprintf "%d doubled is %d, and %d tripled is %d!" x (double x) x (triple x)
+            let x2, x3 = ((double x), (triple x))
+
+            sprintf "%d doubled is %d, and %d tripled is %d!" x x2 x x3
 
 
         let funFactsAboutThree = getFunFacts 3
